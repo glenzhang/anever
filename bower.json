@@ -1,0 +1,26 @@
+{
+  "name": "anever",
+  "version": "0.0.0",
+  "moduleType": [
+    "amd"
+  ],
+  "authors": [
+    "glenzhang@live.com"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.qianduanbiji.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "seajs": "~3.0.0",
+    "backbone": "~1.2.3",
+    "jquery": "~2.1.4",
+    "animate.css": "~3.4.0"
+  }
+}
