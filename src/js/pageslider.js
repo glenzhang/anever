@@ -16,14 +16,27 @@ define(function(require, exports) {
          2.1 detail - list
          2.2 detail - detail
     */
-    exports.slide = function($page, from) {
+    exports.slide = function($page) {
+        var currentRole;
+        var targetRole;
+        var from = 'right';
+
         $view.append($page);
 
-        from = 'left';
-
-        if (!$currentPage || !from) {
+        if (!$currentPage) {
             $currentPage = $page.addClass(pageClass + ' ' + centerClass);
             return;
+        }
+
+        currentRole = $currentPage.data('role');
+        targetRole = $page.data('role');
+
+        if (currentRole == 'detail') {
+            if (targetRole == 'detail') {
+                from = 'right'
+            } else {
+                from = 'left';
+            }
         }
 
         // Position the page at the starting position of the animation
